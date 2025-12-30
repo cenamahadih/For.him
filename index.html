@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+body {
+  margin:0; font-family:'Press Start 2P', cursive;
+  background: linear-gradient(135deg,#f8c8dc,#d9c2f0);
+  color:#333; text-align:center; padding-top:80px; font-size:14px;
+}
+.game-box {
+  border:3px solid #555; background: rgba(255,255,255,0.6);
+  width:85%; margin:auto; padding:25px;
+}
+button {
+  font-family:'Press Start 2P'; background:none; border:2px solid #555;
+  color:black; padding:14px; margin:12px; width:80%; font-size:12px;
+}
+button:hover { background:#fff; color:black; }
+.sticker { width:70px; position:fixed; }
+.left { top:20px; left:20px; }
+.right { bottom:20px; right:20px; }
+</style>
+</head>
+<body>
+
+<img src="heart.png" class="sticker left">
+<img src="star.png" class="sticker right">
+
+<div class="game-box">
+<h1>WELCOME, MY FAVORITE PLAYER</h1>
+<p>A small game made just for you</p>
+
+<button onclick="location.href='start.html'">▶ START</button>
+<button onclick="location.href='memories.html'">▶ MEMORIES</button>
+<button onclick="location.href='secret.html'">▶ SECRET</button>
+</div>
+
+<!-- BACKGROUND MUSIC (sample link) --><iframe
+style="border-radius:12px"
+src="https://open.spotify.com/embed/track/3d9DChrdc6BOeFsbrZ3Is0"
+width="0"
+height="0"
+frameborder="0"
+allow="autoplay">
+</iframe>
+<audio id="bgm" loop>
+  <source src="ishq.mp3" type="audio/mpeg">
+</audio>
+<script>
+const bgm=document.getElementById("bgm"); bgm.volume=0.2;
+document.body.addEventListener('click',()=>{ if(bgm.paused) bgm.play(); },{once:true});
+</script>
+
+</body>
+</html>
